@@ -14,8 +14,11 @@ async def root():
 async def get_data(
     lat: float,
     lon: float,
-    parameters: Union[List[str], str] = Query(...)
+    parameters: Union[List[str]] = Query(...)
 ):
+    # Resolve case sensitivity
+    parameters = [param.upper() for param in parameters]
+
     # Open the Netcdf file
     ds = xr.open_dataset("GEOS-CF.v01.rpl.aqc_tavg_1hr_g1440x721_v1.20250203_0030z.nc4", engine="netcdf4")
 
