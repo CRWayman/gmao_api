@@ -24,3 +24,37 @@ Potential fixes in version 2:
 - Designate views that solely return a description about current endpoint in JSON
 - Designate views that solely return JSON data from data source (wxmaps)
 - Design philosophy: Focus on creating small, isolated functions with clear single responsibilities
+
+
+Layout of Datasets:
+  - Fcst
+    - Chm
+      - V1
+        - No2
+        - O3
+        - Pm2.5
+        - Hcho
+        - Co
+        - so2
+      - p23
+        - ""
+    - Met
+      - X1
+        - MET
+      - P23
+        - MET
+  - Assim
+    - Aqc
+      - V1
+        - No2
+        - O3
+        - pm2.5
+    - Chm
+      - V1
+      - P23
+      - V72
+    - Met
+      - X1
+      - p23
+      - v72
+  
